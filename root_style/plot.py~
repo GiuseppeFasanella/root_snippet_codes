@@ -1,0 +1,4 @@
+import ROOT
+gROOT.gSystem.Load("setTDRStyle.so")
+
+#Now you can plot
