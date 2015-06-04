@@ -12,13 +12,11 @@
   //Or, if you cannot find the directory,
   //wherever you are, you can call the rootlogon with root -l ~/root_style/rootlogon.C                                                                              
 
-  cout << endl << "Welcome to my rootlogon.C" << endl;
-  cout << "reading /home/gfasanel/root/work_dir/root_style/setTDRStyle.C" << endl;
-  cout << "and some personal modifications." << endl << endl;
+  cout << endl << "Setting rootlogon.C" << endl;
 
-  //  gROOT->ProcessLine(".L ~/setTDRStyle.C");
-  gROOT->ProcessLine(".L /home/gfasanel/root/work_dir/root_style/setTDRStyle.C");
+  gROOT->ProcessLine(".L /home/gfasanel/root/work_dir/root_style/setTDRStyle.cc");
   setTDRStyle();
+
   //All this shit is uneffective!! change setTDRStyle instead
   tdrStyle->SetOptTitle(0);
   tdrStyle->SetPadBottomMargin(0.14);
@@ -57,7 +55,8 @@
   TColor::CreateGradientColorTable(Number,Length,Red,Green,Blue,nb);
   tdrStyle->SetNumberContours(nb);//Questo e' fondamentale!!
   }
-/////////////////////////////////////
+  
+  /////////////////////////////////////
 
   gROOT->ForceStyle();
   //gROOT->SetStyle("tdrStyle");

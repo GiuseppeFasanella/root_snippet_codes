@@ -1,24 +1,24 @@
 #include <TROOT.h>
 #include <TStyle.h>
 #include <TGaxis.h>
-
-#include "../interface/setTDRStyle.h"
-
-
+#include "TStyle.h"
+#include "TColor.h"
+#include "TROOT.h"
 
 void setTDRStyle()
 {
   TStyle* tdrStyle = new TStyle("tdrStyle","Style for P-TDR");
-  
   // For the canvas:
   tdrStyle->SetCanvasBorderMode(0);
-  tdrStyle->SetCanvasColor(kWhite);
+  //tdrStyle->SetCanvasColor(kWhite);
+  tdrStyle->SetCanvasColor(kBlue);
   tdrStyle->SetCanvasDefH(600); //Height of canvas
   tdrStyle->SetCanvasDefW(700); //Width of canvas
   //tdrStyle->SetCanvasDefW(800); //Width of canvas
   tdrStyle->SetCanvasDefX(0);   //POsition on screen
   tdrStyle->SetCanvasDefY(0);
   
+
   // For the Pad:
   tdrStyle->SetPadBorderMode(0);
   // tdrStyle->SetPadBorderSize(Width_t size = 1);
@@ -162,10 +162,7 @@ void setTDRStyle()
   //lab->SetNDC();
   //lab->SetTextFont(42);
   //lab->SetTextSize(0.05);
-  //lab->Draw("same");
-  
-  
-  
+  //lab->Draw("same");    
   gROOT -> ForceStyle();
 
   tdrStyle->cd();
