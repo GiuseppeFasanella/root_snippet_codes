@@ -1,5 +1,5 @@
 {
-  gROOT->ProcessLine(".L setTDRSTyle.cc");
+  gROOT->ProcessLine(".L setTDRStyle.cc");
   setTDRStyle();
   //Plotting
 }
