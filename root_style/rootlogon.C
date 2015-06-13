@@ -25,8 +25,7 @@ void rootlogon(){
   TStyle* tdrStyle = new TStyle("tdrStyle","Style for P-TDR");
   // For the canvas:
   tdrStyle->SetCanvasBorderMode(0);
-  //tdrStyle->SetCanvasColor(kWhite);
-  tdrStyle->SetCanvasColor(kBlue);
+  tdrStyle->SetCanvasColor(kWhite);
   tdrStyle->SetCanvasDefH(600); //Height of canvas
   tdrStyle->SetCanvasDefW(700); //Width of canvas
   //tdrStyle->SetCanvasDefW(800); //Width of canvas
