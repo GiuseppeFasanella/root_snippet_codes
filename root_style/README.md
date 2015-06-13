@@ -2,7 +2,7 @@
 
 * make an alias in ~/.bashrc
 
-root = root -l ~/path_to_logon/rootlogon.C
+alias root='root -l path_to_rootlogon/rootlogon.C'
 
 # Set the style in C
 
