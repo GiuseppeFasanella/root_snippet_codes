@@ -1,6 +1,16 @@
+//The Minuit package acts on Fortran Function FCN. for TH1 this FNC is the chisquare
+
 //g is a TGraph o TH1
-TF1* f=new TF1("f","pol2",0.98,1.03);
+TF1* f=new TF1("f","pol2",0.98,1.03); //gaus, expo, polN
+//f->SetParName(0,"c0");
+//f->SetParLimits(0,-1,1); //Set bounds for parameters
 g->Fit(f,"OFR+","",0.98,1.03);
+
+//After the fit, access the fit parameters
+TF1 * fit=g->GetFunction("f");
+double chi2=fit->GetChisquare(); //This is NOT normalized (I think)
+double p1 = fit->GetParameter(1);//Remember that parameters start from 0
+double e1= fit->GetParError(1);
 
 *************User defined functions*****************************************
 //Definisci una tua funzione e poi usala per fittare
