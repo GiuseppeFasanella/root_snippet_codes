@@ -1,5 +1,9 @@
-Asse y
+**Asse y**
+
 h->GetMinimum()
 
-Asse x
+**Asse x**
+
 h->GetXaxis()->GetXmin()
+
+**Ha l'aria di funzionare anche con un grafico**
