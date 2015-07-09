@@ -3,7 +3,9 @@
 //g is a TGraph o TH1
 TF1* f=new TF1("f","pol2",0.98,1.03); //gaus, expo, polN
 //f->SetParName(0,"c0");
-//f->SetParLimits(0,-1,1); //Set bounds for parameters
+//f->SetParameter(1,minX); //initialization for parameter 1
+//f->SetParLimits(0,-1,1); //Set bounds for parameter 0
+//f->FixParameter(2,1.60); //Parameter 2 is fixed
 g->Fit(f,"OFR+","",0.98,1.03);
 
 //After the fit, access the fit parameters
