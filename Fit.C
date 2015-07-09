@@ -33,21 +33,19 @@ fun->SetParameter(0,0);//If you need to initialize
 g->Fit(fun,"OFR+","",0.98,1.02);                                                                                                                                        
 cout<<"minimum is "<<fun->GetMinimumX() <<endl;
 
- *fname: The name of the fitted function (the model) is passed as the first parameter. This
- name may be one of ROOT pre-defined function names or a user-defined function.
- The functions below are predefined, and can be used with the TH1::Fit method:
-o "gaus" Gaussian function with 3 parameters:
+
+* "gaus" Gaussian function with 3 parameters:
  f(x) = p0*exp(-0.5*((x-p1)/p2)^2))
-o "expo" An Exponential with 2 parameters: f(x) = exp(p0+p1*x)
-o "polN" A polynomial of degree N: f(x) = p0 + p1*x + p2*x2
- +...
-o "landau" Landau function with mean and sigma. This function has been adapted
- from the CERNLIB routine G110 denlan.
- *option: The second parameter is the fitting option. Here is the list of fitting options:
+* "expo" An Exponential with 2 parameters: f(x) = exp(p0+p1*x)
+* "polN" A polynomial of degree N: f(x) = p0 + p1*x + p2*x2
+* "landau" Landau function with mean and sigma
+
+**options**: The second parameter is the fitting option. Here is the list of fitting options:
 o "W" Set all weights to 1 for non empty bins; ignore error bars
 o "WW" Set all weights to 1 including empty bins; ignore error bars
 o "I" Use integral of function in bin instead of value at bin center
-o "L" Use log likelihood method (default is chi-square method)
+o "L" Use log likelihood method (default is chi-square method). You can use log likelihood only with histograms, 
+not with graphs!
 o "U" Use a user specified fitting algorithm
 o "Q" Quiet mode (minimum printing)
 o "V" Verbose mode (default is between Q and V)
