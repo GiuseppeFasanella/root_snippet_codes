@@ -6,4 +6,5 @@ h->GetMinimum()
 
 h->GetXaxis()->GetXmin()
 
-**Ha l'aria di funzionare anche con un grafico**
+**Con un grafico NON funziona**
+
