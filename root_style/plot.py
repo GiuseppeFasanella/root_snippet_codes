@@ -4,4 +4,4 @@ import ROOT
 ROOT.gSystem.Load("rootlogon_C.so")
 ROOT.rootlogon()
 #Start plotting 
-
+ROOT.gROOT.SetBatch(ROOT.kTRUE) #Do not show-up canvases
