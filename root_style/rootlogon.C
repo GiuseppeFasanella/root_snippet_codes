@@ -21,7 +21,7 @@ void rootlogon(){
   //wherever you are, you can call the rootlogon with root -l ~/root_style/rootlogon.C                                                                              
 
   std::cout << std::endl << "Setting rootlogon.C" << std::endl;
-
+  //TGaxis::SetMaxDigits(2);//Fa schifo come soluzione
   TStyle* tdrStyle = new TStyle("tdrStyle","Style for P-TDR");
   // For the canvas:
   tdrStyle->SetCanvasBorderMode(0);
