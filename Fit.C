@@ -11,6 +11,7 @@ g->Fit(f,"OFR+","",0.98,1.03);
 //After the fit, access the fit parameters
 TF1 * fit=g->GetFunction("f");
 double chi2=fit->GetChisquare(); //This is NOT normalized (I think)
+int    dof = fit->GetNDF();
 double p1 = fit->GetParameter(1);//Remember that parameters start from 0
 double e1= fit->GetParError(1);
 
