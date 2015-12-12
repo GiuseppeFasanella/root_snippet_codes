@@ -1,4 +1,5 @@
 TFile *f = new TFile("tmp/outside_init.root", "recreate");
+TFile *_file0 = TFile::Open("file.root"); //credo che per eos e' l'unico modo ammesso
 f->Print();
 f->cd();
 //histo->Write();
