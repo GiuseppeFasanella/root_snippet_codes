@@ -15,6 +15,10 @@ int    dof = fit->GetNDF();
 double p1 = fit->GetParameter(1);//Remember that parameters start from 0
 double e1= fit->GetParError(1);
 
+//write the fit results on the legend
+leg->AddEntry(fitFunc, Form("SF = %.3lf #pm %.3lf",fitFunc->GetParameter(0),fitFunc->GetParError(0)), "");
+
+
 *************User defined functions*****************************************
 //Definisci una tua funzione e poi usala per fittare
 Double_t asymmetricParabola(Double_t* x,Double_t* par); //Dichiarazione della funzione
