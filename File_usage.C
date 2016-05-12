@@ -14,3 +14,5 @@ f->Close();
            = UPDATE          open an existing file for writing.
                              if no file exists, it is created.
            = READ            open an existing file for reading (default)
+
+https://github.com/GiuseppeFasanella/C_Cpp_concepts/blob/master/file_handling.C
