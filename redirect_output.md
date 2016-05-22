@@ -4,3 +4,5 @@ root [1] .x hi.C
 ```
 
 se apri test.log trovi l'output di hi.C
+
+Di un tree pero' non so come fare
